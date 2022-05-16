@@ -32,7 +32,7 @@ else
 fi
 
 # Final repository
-DEPLOY_REPO="https://github.com/${REPOSITORY_NAME}.git"
+DEPLOY_REPO="https://username:${ACCESS_TOKEN}@github.com/${REPOSITORY_NAME}.git"
 if [ "$TARGET_LINK" ]; then
   DEPLOY_REPO="$TARGET_LINK"
 fi
@@ -41,7 +41,7 @@ echo "==> Prepare to deploy"
 
 git init
 git config user.name "${GITHUB_ACTOR}"
-git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+git config user.email "${GITHUB_ACTOR}@gamil.com"
 
 if [ -z "$(git status --porcelain)" ]; then
     echo "The BUILD_DIR is setting error or nothing produced" && \
